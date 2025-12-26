@@ -1,0 +1,137 @@
+/* styles.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: radial-gradient(ellipse at bottom, #000020 0%, #000000 100%);
+  overflow: hidden;
+  color: #fff;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.3);
+  border-bottom: 2px solid #fff;
+  z-index: 10;
+  position: relative;
+}
+
+h1 {
+  font-size: 3em;
+  margin: 0;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+}
+
+#starfield {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: -1;
+  background: black;
+}
+
+.space-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Spaceship Styles */
+.spaceship {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  width: 80px;
+  height: 200px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  z-index: 10;
+}
+.spaceship:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #fff;
+}
+
+.body {
+  width: 60px;
+  height: 120px;
+  background: linear-gradient(to bottom, #ccc, #999);
+  border-radius: 20px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.hatch {
+  width: 20px;
+  height: 20px;
+  background: #555;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  left: calc(50% - 10px);
+  box-shadow: inset 0 0 5px #000;
+}
+
+.window {
+  width: 20px;
+  height: 20px;
+  background: #00ffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 40px;
+  left: calc(50% - 10px);
+  box-shadow: inset 0 0 5px #000;
+}
+
+/* Celestial Bodies */
+.celestial-body {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffcc00, #ff6600);
+  box-shadow: 0 0 20px #ffcc00;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+#planet {
+  width: 80px;
+  height: 80px;
+  top: 20%;
+  left: 70%;
+}
+#comet {
+  width: 50px;
+  height: 20px;
+  top: 70%;
+  left: 10%;
+  background: linear-gradient(135deg, #fff, #ccc);
+  box-shadow: 0 0 10px #fff;
+  border-radius: 0 50% 50% 0 / 50%;
+  transform: rotate(45deg);
+}
+
+/* Button */
+#launchBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  background: linear-gradient(135deg, #00ffff, #006666);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 20px #00ffff;
+  transition: all 0.3s;
+  z-index: 20;
+}
+#launchBtn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 40px #00ffff;
+}
